@@ -10,7 +10,7 @@
     string d = Console.ReadLine();
 
     array[0] = a;
-    array[1] = b;  
+    array[1] = b;
     array[2] = c;
     array[3] = d;
 
@@ -26,11 +26,31 @@ void PrintArray(string[] array)
     }
 }
 
+string[] NewArray(string[] array, string[] newArray)
+{
+    int j = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(array[i].Length <= 3)
+        {
+            newArray[j] = array[i];
+            j++;
+        }
+    }
 
+    return array;
+}
 
 string[] array = new string[4];
 
 Array(array);
 Console.WriteLine();
 PrintArray(array);
+Console.WriteLine();
+
+string[] newArray = new string[4];
+
+NewArray(array, newArray);
+Console.WriteLine();
+PrintArray(newArray);
 Console.WriteLine();
