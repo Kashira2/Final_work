@@ -19,26 +19,40 @@
 
 void PrintArray(string[] array)
 {
-    foreach (string item in array)
+   for (int i = 0; i <= 3; i++)
     {
-        Console.Write($"{item}, ");
-
+        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
+        else Console.Write($"{array[i]}");
     }
 }
+
+void PrintNewArray(string[] massive)
+{
+    for (int i = 0; i <= 3; i++)
+    {
+        if (massive[i] == null) Console.Write("");
+        else if (i < massive.Length - 1) Console.Write($"{massive[i]}, ");
+        else Console.Write($"{massive[i]}");
+    }
+
+}
+
+
 
 string[] NewArray(string[] array, string[] newArray)
 {
     int j = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if(array[i].Length <= 3)
+        if (array[i].Length <= 3)
         {
             newArray[j] = array[i];
             j++;
         }
+        else newArray[j] = null;
     }
 
-    return array;
+    return newArray;
 }
 
 string[] array = new string[4];
@@ -52,5 +66,5 @@ string[] newArray = new string[4];
 
 NewArray(array, newArray);
 Console.WriteLine();
-PrintArray(newArray);
+PrintNewArray(newArray);
 Console.WriteLine();
