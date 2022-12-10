@@ -1,4 +1,6 @@
-﻿string[] Array(string[] array)
+﻿// метод создания стартового массива, путем заполнения массива с клавиатуры
+
+string[] Array(string[] array)
 {
     Console.WriteLine("Введите первый элемент массива: ");
     string a = Console.ReadLine();
@@ -17,6 +19,7 @@
     return array;
 }
 
+// метод вывода массива в консоли
 void PrintArray(string[] array)
 {
    for (int i = 0; i <= 3; i++)
@@ -26,6 +29,7 @@ void PrintArray(string[] array)
     }
 }
 
+// метод вывода итогово массива в консоли
 void PrintNewArray(string[] massive)
 {
     for (int i = 0; i <= 3; i++)
@@ -37,8 +41,7 @@ void PrintNewArray(string[] massive)
 
 }
 
-
-
+// метод создания массива строк, длина которых меньше или равна 3 символа
 string[] NewArray(string[] array, string[] newArray)
 {
     int j = 0;
@@ -54,6 +57,8 @@ string[] NewArray(string[] array, string[] newArray)
 
     return newArray;
 }
+
+
 
 string[] array = new string[4];
 
